@@ -117,7 +117,10 @@ def analyze_frame(img_bgr):
     elif risk >= 3:
         verdict = "WARNING"
 
-    return {
+        return {
         "face_count": face_count,
         "brightness": round(bright, 2),
-        "risk": i
+        "risk": int(risk),
+        "verdict": verdict,
+        "events": events
+    }
